@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry GEM</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="m-12 max-w-full">
+    <header></header>
+    <main>
+        <!-- main container -->
+        <div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5 w-[75%]">
+                <!-- triangle -->
+                <div class="card bg-base-100 border-gray-300 border-2 w-80 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/triangle.png" alt="triangle" class=" rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Triangle</h2>
+                        <p>Area(a) = 0.5 ✕ b ✕ h</p>
+                        <div class="flex">
+                            <input type="number" placeholder="b" class="border-gray-400 w-24 border-2 rounded-md p-3"
+                                id="base-of-triangle">
+                            <span class="mx-2"> cm </span>
+                            <input type="number" placeholder="h" class="border-gray-400 w-24 border-2 rounded  p-3"
+                                id="height-of-triangle">
+                            <span class="mx-2">cm</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn text-white bg-[#1090D8]"
+                                onclick="calculateTriangleArea()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- rectangle -->
+                <div class="card bg-base-100 border-gray-300 border-2 w-80 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/rectangle.png" alt="rectangle" class=" rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Rectangle</h2>
+                        <p>Area(a) = W ✕ L</p>
+                        <div class="flex">
+                            <input type="number" placeholder="w" class="border-gray-400 w-24 border-2 rounded-md p-3"
+                                id="width-of-rectangle">
+                            <span class="mx-2"> cm </span>
+                            <input type="number" placeholder="l" class="border-gray-400 w-24 border-2 rounded  p-3"
+                                id="length-of-rectangle">
+                            <span class="mx-2">cm</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn text-white bg-[#1090D8]"
+                                onclick="calculateTheAreaOfRectangle()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Parallelogram -->
+                <div class="card bg-base-100 border-gray-300 border-2 w-80 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/parallelogram.png" alt="parallelogram" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Parallelogram</h2>
+                        <p>Area(a) = B ✕ H</p>
+                        <div class="flex">
+                            <input type="number" placeholder="b" class="border-gray-400 w-24 border-2 rounded-md p-3"
+                                id="base-of-parallelogram">
+                            <span class="mx-2"> cm </span>
+                            <input type="number" placeholder="h" class="border-gray-400 w-24 border-2 rounded  p-3"
+                                id="height-of-parallelogram">
+                            <span class="mx-2">cm</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn text-white bg-[#1090D8]"
+                                onclick="calculateParallelogram()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Rhombus -->
+                <div class="card bg-base-100 border-gray-300 border-2 w-80 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/rhombus.png" alt="rhombus" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Rhombus</h2>
+                        <p>Area(a) = B ✕ H</p>
+                        <div class="flex">
+                            <input type="number" placeholder="b" class="border-gray-400 w-24 border-2 rounded-md p-3"
+                                id="base-of-rhombus">
+                            <span class="mx-2"> cm </span>
+                            <input type="number" placeholder="h" class="border-gray-400 w-24 border-2 rounded  p-3"
+                                id="height-of-rhombus">
+                            <span class="mx-2">cm</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn text-white bg-[#1090D8]" onclick="calculateRhombus()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- pentagon -->
+                <div class="card bg-base-100 border-gray-300 border-2 w-80 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/pentagon.png" alt="pentagon" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Pentagon</h2>
+                        <p>Area(a) = B ✕ H</p>
+                        <div class="flex">
+                            <input type="number" placeholder="b" class="border-gray-400 w-24 border-2 rounded-md p-3"
+                                id="base-of-rhombus">
+                            <span class="mx-2"> cm </span>
+                            <input type="number" placeholder="h" class="border-gray-400 w-24 border-2 rounded  p-3"
+                                id="height-of-rhombus">
+                            <span class="mx-2">cm</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn text-white bg-[#1090D8]" onclick="calculateRhombus()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="scripts/triangleCalculate.js"></script>
+    <script src="scripts/rectangleCalculate.js"></script>
+    <script src="scripts/parallelogram.js"></script>
+    <script src="scripts/calculateRhombus.js"></script>
+
+</body>
+
+</html>
